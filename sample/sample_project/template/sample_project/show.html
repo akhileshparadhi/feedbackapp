@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Feedbacks </title>
+</head>
+<body>
+
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>Feedback</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for feedback in feedbacks %}
+    <tr>
+        <td>{{ feedback.firstName }}</td>
+        <td>{{ feedback.lastName }}</td>
+        <td>{{ feedback.email }}</td>
+        <td>{{ feedback.country }}</td>
+        <td>{{ feedback.feed }}</td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<center><a href="/create" class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>
